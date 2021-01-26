@@ -2,7 +2,12 @@ import bondPic from './IMG_1101.jpg';
 import './App.css';
 import React from 'react';
 
-import HobbyWord from './HobbyWord'
+import HobbyWord from './HobbyWord';
+import IconNav from './IconNav';
+import Footer from './Footer'
+
+//https://iconify.design/icon-sets/ant-design/linkedin-filled.html
+
 
 const App = () => {
 	return (
@@ -15,9 +20,11 @@ const App = () => {
 				/>
 			</div>
 			<div className="content-container">
-				<h1>Hello! My name is Kayla and I am a</h1>
+				<h2>Hello! My name is Kayla Sward and I am a</h2>
 				<HobbyWord />
 			</div>
+			<IconNav />
+			<Footer />
 		</div>
 	);
 };
