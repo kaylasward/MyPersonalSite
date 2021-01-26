@@ -1,33 +1,6 @@
 import bondPic from './IMG_1101.jpg';
 import './App.css';
-import React, { useState, useEffect, useSetInterval, useRef } from 'react';
-
-// const useTypewriter = (message = []) => {
-// 	const [txt, setTxt] = useState('');
-
-// 	const intervalRef = useRef();
-
-// 	useEffect(() => {
-// 		let index = 0; // init the index
-
-// 		clearInterval(intervalRef.current); // clear the interval if message changes
-
-// 	//	if (!message.length) return; // do nothing if message is empty
-
-// 		intervalRef.current = setInterval(() => {
-// 			setTxt(message[index]);
-// 			console.log(txt)
-
-// 			index += 1;
-
-// 		//	if (index === message.length) clearInterval(intervalRef.current); // clear interval when message ends
-// 		}, 1000);
-
-// 		return () => clearInterval(intervalRef.current); // clear interval if component is unmounted
-// 	}, [message, intervalRef, setTxt]);
-
-// 	return txt;
-// };
+import React, { useState, useEffect, useRef } from 'react';
 
 const App = () => {
 	const hobbyArray = [
@@ -41,23 +14,22 @@ const App = () => {
 
 	const [currHobby, setCurrHobby] = useState(hobbyArray[0]);
 	const [isActive, setIsActive] = useState(true);
-	
-	var index = 0;
+
+	const index = useRef(0);
 
 	useEffect(() => {
 		let interval = null;
 		if (isActive) {
 			interval = setInterval(() => {
-				index = index + 1;
-				console.log(index);
-				setCurrHobby(hobbyArray[index]);
-				if (index === hobbyArray.length) {
+				index.current++;
+				setCurrHobby(hobbyArray[index.current]);
+				if (index.current === hobbyArray.length - 1) {
 					setIsActive(false);
 				}
 			}, 1000);
 		}
 		return () => clearInterval(interval);
-	}, index);
+	}, [hobbyArray, isActive]);
 
 	return (
 		<div>
