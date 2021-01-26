@@ -1,13 +1,13 @@
 .mountain-pic {
 	width: 100%; /* width of container */
-	height: 300px; /* height of container */
+	height: 250px; /* height of container */
 	object-fit: cover;
 }
 
 .content-container {
 	font-family: 'Dosis';
 	text-align: center;
-	padding: 50px;
+	padding: 40px;
 }
 
 .icon-container {

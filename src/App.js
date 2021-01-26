@@ -4,10 +4,7 @@ import React from 'react';
 
 import HobbyWord from './HobbyWord';
 import IconNav from './IconNav';
-import Footer from './Footer'
-
-//https://iconify.design/icon-sets/ant-design/linkedin-filled.html
-
+//import Footer from './Footer'
 
 const App = () => {
 	return (
@@ -24,7 +21,6 @@ const App = () => {
 				<HobbyWord />
 			</div>
 			<IconNav />
-			<Footer />
 		</div>
 	);
 };
