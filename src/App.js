@@ -29,18 +29,18 @@ const App = () => {
 			}, 1000);
 		}
 		return () => clearInterval(interval);
-	}, [hobbyArray, isActive]);
+	});
 
 	return (
 		<div>
-			<div class=".mountain-pic">
+			<div className=".mountain-pic">
 				<img
 					src={bondPic}
 					className="mountain-pic"
 					alt="Mount Bondcliff"
 				/>
 			</div>
-			<div class="content-container">
+			<div className="content-container">
 				<h1>Hello! My name is Kayla and I am a</h1>
 				<h1>{currHobby}</h1>
 			</div>
