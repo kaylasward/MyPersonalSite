@@ -13,6 +13,7 @@ const IconNav = () => {
 				noHover={icon.noHover}
 				withHover={icon.withHover}
 				redirect={icon.redirect}
+				color={icon.color}
 			/>
 		);
 	});
