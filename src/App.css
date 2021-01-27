@@ -1,3 +1,20 @@
+body {
+	background-color: #E0E0E0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+.main-container {
+
+}
+
 .mountain-pic {
 	width: 100%; /* width of container */
 	height: 250px; /* height of container */
@@ -20,12 +37,16 @@
 }
 
 .footer {
-	text-align: center;
-	position: fixed;
+	
+
+	
+	/* position: absolute;
 	bottom: 0;
-	width: 100%;
-	padding: 10px;
+	width: 100%; */
 	font-family: 'Dosis';
+	text-align: center;
+
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
