@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 const ContactIcon = (props) => {
 	const [iconHovered, setIconHovered] = useState({
 		icon: props.noHover,
-		color: "black",
+		color: 'black',
 	});
 
 	return (

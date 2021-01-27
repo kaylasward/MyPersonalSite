@@ -18,11 +18,7 @@ const IconNav = () => {
 		);
 	});
 
-	return (
-		<div className="icon-container">
-			{iconList}
-		</div>
-	);
+	return <div className="icon-container">{iconList}</div>;
 };
 
 export default IconNav;
