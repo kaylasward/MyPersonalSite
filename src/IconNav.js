@@ -1,6 +1,6 @@
-import './App.css';
 import React from 'react';
 
+import './App.css';
 import ContactIcon from './ContactIcon';
 import IconList from './IconList';
 

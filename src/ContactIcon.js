@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
-
 import { Icon } from '@iconify/react';
+
+import './App.css';
 
 const ContactIcon = (props) => {
 	const [iconHovered, setIconHovered] = useState({

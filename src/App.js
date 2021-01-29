@@ -1,6 +1,7 @@
+import React from 'react';
+
 import bondPic from './IMG_1101.jpg';
 import './App.css';
-import React from 'react';
 
 import HobbyWord from './HobbyWord';
 import IconNav from './IconNav';
@@ -22,7 +23,6 @@ const App = () => {
 					<HobbyWord />
 				</div>
 				<div className="content-container">
-					<h3>Contact</h3>
 					<IconNav />
 				</div>
 

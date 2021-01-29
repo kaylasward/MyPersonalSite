@@ -32,13 +32,13 @@ const IconList = [
 		color: '#BB001B',
 		redirect: 'mailto:swardkm@gmail.com',
 	},
-	{
-		name: 'Resumé',
-		noHover: fileTextOutlined,
-		withHover: fileTextTwotone,
-		color: 'black',
-		redirect: 'google.com',
-	},
+	// {
+	// 	name: 'Resumé',
+	// 	noHover: fileTextOutlined,
+	// 	withHover: fileTextTwotone,
+	// 	color: 'black',
+	// 	redirect: 'google.com',
+	// },
 ];
 
 export default IconList;
