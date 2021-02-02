@@ -17,8 +17,10 @@ const HobbyWord = () => {
 			interval = setInterval(() => {
 				index.current++;
 				setCurrHobby(hobbyArray[index.current]);
-				var randNum = Math.random() * randomHexColors.length;
-				setCurrColor(randomHexColors[Math.floor(randNum)]);
+				var randNum = Math.floor(
+					Math.random() * randomHexColors.length
+				);
+				setCurrColor(randomHexColors[randNum]);
 				if (index.current === hobbyArray.length - 1) {
 					setCurrColor('#1798c1');
 					setIsActive(false);
