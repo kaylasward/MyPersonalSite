@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-import bondPic from './IMG_1101.jpg';
 import './App.css';
-
+import bondPic from './IMG_1101.jpg';
 import HobbyWord from './HobbyWord';
 import IconNav from './IconNav';
 //import Footer from './Footer';
 
 const App = () => {
+	const [isLoading, setLoading] = useState(true);
+
+	function fakeRequest() {
+		return new Promise((resolve) => setTimeout(() => resolve(), 1000));
+	}
+
+	useEffect(() => {
+		fakeRequest().then(() => {
+			const el = document.querySelector('.loader-container');
+			if (el) {
+				el.remove();
+				setLoading(!isLoading);
+			}
+		});
+	}, []);
+
+	if (isLoading) {
+		return null;
+	}
+
 	return (
 		<div className="body">
 			<div className="main-container">

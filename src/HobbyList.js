@@ -2,7 +2,6 @@ const hobbyArray = [
 	'Programmer',
 	'Hiker',
 	'Home Cook',
-	'Rock Climber',
 	'Nature-Lover',
 	'Movie Buff',
 	'Senior Software Engineer at Salesforce.',

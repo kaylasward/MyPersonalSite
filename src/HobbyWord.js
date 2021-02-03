@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Animated } from 'react-animated-css';
+import ReactCSSTransitionGroup from 'react-transition-group';
+import { AnimateOnChange } from 'react-animation';
 
 import { hobbyArray, randomHexColors } from './HobbyList';
 
@@ -30,7 +33,13 @@ const HobbyWord = () => {
 		return () => clearInterval(interval);
 	});
 
-	return <h1 style={{ color: currColor }}>{currHobby}</h1>;
+	return (
+		<div>
+			<AnimateOnChange>
+				<h1 style={{ color: currColor }}>{currHobby}</h1>
+			</AnimateOnChange>
+		</div>
+	);
 };
 
 export default HobbyWord;
