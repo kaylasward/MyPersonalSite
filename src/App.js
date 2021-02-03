@@ -1,54 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { Transition } from 'react-spring/renderprops';
 
 import './App.css';
-import bondPic from './IMG_1101.jpg';
-import HobbyWord from './HobbyWord';
-import IconNav from './IconNav';
+import HomeScreen from './HomeScreen';
+import LoadingScreen from './LoadingScreen';
 //import Footer from './Footer';
 
 const App = () => {
 	const [isLoading, setLoading] = useState(true);
-
-	function fakeRequest() {
-		return new Promise((resolve) => setTimeout(() => resolve(), 1000));
-	}
+	//	const pages = [<HomeScreen />, <LoadingScreen />];
 
 	useEffect(() => {
-		fakeRequest().then(() => {
-			const el = document.querySelector('.loader-container');
-			if (el) {
-				el.remove();
-				setLoading(!isLoading);
-			}
-		});
+		setTimeout(() => setLoading(false), 2500);
 	}, []);
 
-	if (isLoading) {
-		return null;
-	}
-
-	return (
-		<div className="body">
-			<div className="main-container">
-				<div className=".mountain-pic">
-					<img
-						src={bondPic}
-						className="mountain-pic"
-						alt="Mount Bondcliff"
-					/>
-				</div>
-				<div className="content-container">
-					<h2>Hello! My name is Kayla Sward and I am a</h2>
-					<HobbyWord />
-				</div>
-				<div className="content-container">
-					<IconNav />
-				</div>
-
-				{/* <Footer /> */}
-			</div>
-		</div>
-	);
+	return <>{isLoading === false ? <HomeScreen /> : <LoadingScreen />}</>;
 };
 
 export default App;
