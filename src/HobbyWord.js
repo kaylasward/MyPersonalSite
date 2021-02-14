@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Animated } from 'react-animated-css';
-import ReactCSSTransitionGroup from 'react-transition-group';
 import { AnimateOnChange } from 'react-animation';
 
 import { hobbyArray, randomHexColors } from './HobbyList';

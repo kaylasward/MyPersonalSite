@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { CSSTransition } from 'react-transition-group';
-import { Transition } from 'react-spring/renderprops';
 
 import './App.css';
 import HomeScreen from './HomeScreen';
@@ -12,7 +10,7 @@ const App = () => {
 	//	const pages = [<HomeScreen />, <LoadingScreen />];
 
 	useEffect(() => {
-		setTimeout(() => setLoading(false), 2500);
+		setTimeout(() => setLoading(false), 4000);
 	}, []);
 
 	return <>{isLoading === false ? <HomeScreen /> : <LoadingScreen />}</>;
