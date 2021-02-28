@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import '../App.css';
 import bondPic from '../data/IMG_1101.jpg';
@@ -10,29 +10,40 @@ import IconNav from '../components/IconNav';
 
 const HomeScreen = () => {
 	return (
-		<div className="body">
-			<div className="main-container">
-				<div className=".mountain-pic">
-					<img
-						src={bondPic}
-						className="mountain-pic"
-						alt="Mount Bondcliff"
-					/>
-				</div>
-				<div className="content-container">
-					<h2>Hello! My name is Kayla Sward and I am a</h2>
-					<HobbyWord />
-				</div>
-				<div className="content-container">
-					<IconNav />
-				</div>
+		<MainContainer>
+			<MountainPicContainer>
+				<img
+					src={bondPic}
+					className="mountain-pic"
+					alt="Mount Bondcliff"
+				/>
+			</MountainPicContainer>
+			<ContentContainer>
+				<h2>Hello! My name is Kayla Sward and I am a</h2>
+				<HobbyWord />
+			</ContentContainer>
 
-				<Link to="/portfolio">portfolio</Link>
+			<ContentContainer>
+				<IconNav />
+			</ContentContainer>
 
-				{/* <Footer /> */}
-			</div>
-		</div>
+			{/* <Footer /> */}
+		</MainContainer>
 	);
 };
+
+const MainContainer = styled.div``;
+
+const MountainPicContainer = styled.div`
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+`;
+
+const ContentContainer = styled.div`
+	font-family: 'Dosis';
+	text-align: center;
+	padding: 40px;
+`;
 
 export default HomeScreen;

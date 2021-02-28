@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
 import {
 	Card,
 	CardHeader,
@@ -10,9 +9,6 @@ import {
 	Chip,
 	Grid,
 } from '@material-ui/core';
-
-import documents from '../data/portfoliodocsdata.js';
-import Doc from '../components/Doc';
 
 const PortfolioGrid = (props) => {
 	return (
@@ -39,7 +35,7 @@ const PortfolioGrid = (props) => {
 
 					return (
 						<Grid key={doc.id} item>
-							<Card style={{ width: 300, margin: 20 }}>
+							<Card style={{ width: 300, margin: 10 }}>
 								<CardHeader
 									title={doc.name}
 									subheader={docDate}
@@ -58,33 +54,18 @@ const PortfolioGrid = (props) => {
 									/>
 								))}
 								<CardActions>
-									{doc.type === 'PDF' ? (
-										<Link
-											to={`${props.url}/${doc.id}`}
-											style={{ textDecoration: 'none' }}
-										>
-											{viewButton}
-										</Link>
-									) : (
-										<a
-											href={doc.url}
-											style={{ textDecoration: 'none' }}
-										>
-											{viewButton}
-										</a>
-									)}
+									<a
+										href={doc.url}
+										style={{ textDecoration: 'none' }}
+									>
+										{viewButton}
+									</a>
 								</CardActions>
 							</Card>
 						</Grid>
 					);
 				})}
 			</Grid>
-
-			<Switch>
-				<Route exact path={`/${props.url}/:docid`}>
-					<Doc />
-				</Route>
-			</Switch>
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import '../App.css';
 import ContactIcon from './ContactIcon';
 import IconList from './IconList';
 
@@ -18,7 +18,11 @@ const IconNav = () => {
 		);
 	});
 
-	return <div className="icon-container">{iconList}</div>;
+	return <IconContainer>{iconList}</IconContainer>;
 };
+
+const IconContainer = styled.div`
+	text-align: center;
+`;
 
 export default IconNav;

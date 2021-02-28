@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
 
-import './App.css';
 import HomeScreen from './pages/HomeScreen';
 import LoadingScreen from './pages/LoadingScreen';
 import Portfolio from './pages/Portfolio';
-import Doc from './components/Doc';
 //import Footer from './Footer';
 
 const App = () => {
@@ -18,11 +17,8 @@ const App = () => {
 
 	//return <>{isLoading === false ? <HomeScreen /> : <LoadingScreen />}</>;
 	return (
-		<div>
+		<Container>
 			<Switch>
-				<Route exact path="/portfolio/:id">
-					<Doc />
-				</Route>
 				<Route path="/portfolio">
 					<Portfolio />
 				</Route>
@@ -30,8 +26,14 @@ const App = () => {
 					<HomeScreen />
 				</Route>
 			</Switch>
-		</div>
+		</Container>
 	);
 };
+
+const Container = styled.div`
+	background-color: #e0e0e0;
+	margin: 0;
+	height: 100vh;
+`;
 
 export default App;

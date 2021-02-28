@@ -12,23 +12,10 @@ h2 {
 	font-size: 36px;
 }
 
-.main-container {
-}
-
 .mountain-pic {
 	width: 100%; /* width of container */
 	height: 250px; /* height of container */
 	object-fit: cover;
-}
-
-.content-container {
-	font-family: 'Dosis';
-	text-align: center;
-	padding: 40px;
-}
-
-.icon-container {
-	text-align: center;
 }
 
 .icons {
