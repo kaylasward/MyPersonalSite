@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import './App.css';
-import bondPic from './IMG_1101.jpg';
-import HobbyWord from './HobbyWord';
-import IconNav from './IconNav';
+import '../App.css';
+import bondPic from '../data/IMG_1101.jpg';
+import HobbyWord from '../components/HobbyWord';
+import IconNav from '../components/IconNav';
+
 //import Footer from './Footer';
 
-const App = () => {
+const HomeScreen = () => {
 	return (
 		<div className="body">
 			<div className="main-container">
@@ -25,10 +27,12 @@ const App = () => {
 					<IconNav />
 				</div>
 
+				<Link to="/portfolio">portfolio</Link>
+
 				{/* <Footer /> */}
 			</div>
 		</div>
 	);
 };
 
-export default App;
+export default HomeScreen;
